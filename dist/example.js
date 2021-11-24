@@ -76,7 +76,7 @@ class Field {
     }
     searchClusters() {
         this.print();
-        console.time('FirstWay');
+
         for (let i = 0; i < this._cells.length - 1; i++) {
             let cluster = new Cluster(this._cells[i].value);
             this.dfs(this._cells[i], cluster);
@@ -84,7 +84,7 @@ class Field {
                 this._clusters.push(cluster);
             }
         }
-        console.timeEnd('FirstWay');
+
         return this._clusters;
     }
 }
